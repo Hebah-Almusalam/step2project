@@ -1,0 +1,277 @@
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --redux-color: #764abc;
+}
+
+html {
+  height: 100%;
+}
+body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+
+}
+
+div#root {
+  height: 100%;
+}
+
+
+p {
+  font-size: 1.1rem;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background: #bfb5b2;
+  color: #111111;
+  min-width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 2;
+}
+
+main h1,
+main h2 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  font-style:unset;
+  margin-top: 5%;
+
+  
+}
+
+:focus {
+  outline: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.todoapp {
+  background: #fff;
+  min-width: 800px;
+  position: relative;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+
+
+.todoapp header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoapp h1 {
+  position: absolute;
+  top: -140px;
+  width: 100%;
+  font-size: 80px;
+  font-weight: 200;
+  text-align: center;
+  color: #b83f45;
+
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #e6e6e6;
+}
+
+
+.toggle-all:checked + label:before {
+  color: #737373;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+ul.todo-list {
+  list-style: none;
+}
+
+.todo-list li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #ededed;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list li .view {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list li .segment {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list li .segment.label {
+  flex-grow: 2;
+}
+
+.todo-list li .toggle {
+  text-align: center;
+  width: 40px;
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none; /* Mobile Safari */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.todo-list li .toggle {
+  opacity: 0;
+}
+
+.todo-list li .toggle + .todo-text {
+
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAUUlEQVRIiWNgGAUkAg8GBobHDAwM/8nEj6Bm4ASPKDAc2RKcAKaIXIChn4kCw4gCoxaMWjBqwagFg9GCx1Ca3KIa2QyswIOBsjqBYIUzCjAAALrIRhJJbcctAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.todo-list li .toggle:checked + .todo-text {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAWUlEQVRIie2VQQrAIAwEx76u4v8/YPyHPVmkoGDNodAdyEmYiaeAWCQBBagvx4A4C9iGvE3uheERqIs/HnF7DyfhEAUUUECBLwaKg9Nmj5G9m5CB02HJP3EBgwA1L3r99a0AAAAASUVORK5CYII=');
+}
+
+.todo-list li .todo-text {
+  margin: 5px;
+  word-break: break-all;
+  padding: 5px 5px 5px 60px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+  font-weight: 400;
+  color: black;
+  flex-grow: 2;
+}
+
+.todo-list li.completed label {
+  color: #cdcdcd;
+  text-decoration: line-through;
+}
+
+.todo-list li .destroy {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  margin-top: 12px;
+  font-size: 70px;
+  line-height: 30px;
+  color: #000000;
+  transition: color 0.2s ease-out;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.todo-count strong {
+  font-weight: 600;
+}
+
+.info {
+  margin: 65px auto 0;
+  color: #4d4d4d;
+  font-size: 11px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.info p {
+  line-height: 1;
+}
+
+.info a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .toggle-all,
+  .todo-list li .toggle {
+    background: none;
+  }
+
+  .todo-list li .toggle {
+    height: 40px;
+  }
+}
+
+@media (max-width: 840px) {
+
+
+  .todoapp {
+    min-width: inherit;
+  }
+
+  .todo-list li .view {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 5px;
+  }
+
+  .todo-list li .segment.buttons {
+    justify-content: flex-end;
+  }
+
+
+}
